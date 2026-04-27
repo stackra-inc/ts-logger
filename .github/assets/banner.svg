@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" width="1200" height="400">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#818cf8"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="400" fill="url(#bg)"/>
+  <rect width="1200" height="400" fill="url(#grid)"/>
+  <circle cx="950" cy="80" r="180" fill="#38bdf8" opacity="0.03"/>
+  <circle cx="1000" cy="120" r="120" fill="#818cf8" opacity="0.04"/>
+  <circle cx="200" cy="350" r="150" fill="#c084fc" opacity="0.03"/>
+  <rect x="0" y="0" width="1200" height="3" fill="url(#accent)"/>
+  <!-- Terminal / log lines icon -->
+  <g transform="translate(88, 120)" filter="url(#glow)">
+    <rect x="0" y="0" width="120" height="120" rx="8" fill="#0f172a" stroke="url(#iconGrad)" stroke-width="2"/>
+    <rect x="0" y="0" width="120" height="20" rx="8" fill="#1e293b" stroke="url(#iconGrad)" stroke-width="1" opacity="0.6"/>
+    <circle cx="14" cy="10" r="4" fill="#38bdf8" opacity="0.7"/>
+    <circle cx="26" cy="10" r="4" fill="#818cf8" opacity="0.7"/>
+    <circle cx="38" cy="10" r="4" fill="#c084fc" opacity="0.7"/>
+    <rect x="10" y="30" width="60" height="6" rx="3" fill="#34d399" opacity="0.7"/>
+    <rect x="10" y="44" width="90" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+    <rect x="10" y="58" width="40" height="6" rx="3" fill="#f59e0b" opacity="0.7"/>
+    <rect x="10" y="72" width="80" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+    <rect x="10" y="86" width="50" height="6" rx="3" fill="#f87171" opacity="0.7"/>
+    <rect x="10" y="100" width="70" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+  </g>
+  <text x="240" y="178" font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="42" font-weight="700" fill="#f1f5f9" letter-spacing="-0.5">@stackra/ts-logger</text>
+  <text x="240" y="218" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif" font-size="18" fill="#94a3b8">Flexible logging with multiple formatters and transporters for React</text>
+  <g transform="translate(240, 245)">
+    <rect x="0" y="0" width="110" height="32" rx="6" fill="#34d399" opacity="0.12"/>
+    <rect x="0" y="0" width="110" height="32" rx="6" fill="none" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+    <text x="55" y="21" font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="13" fill="#34d399" text-anchor="middle">Console</text>
+    <rect x="126" y="0" width="96" height="32" rx="6" fill="#38bdf8" opacity="0.12"/>
+    <rect x="126" y="0" width="96" height="32" rx="6" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.3"/>
+    <text x="174" y="21" font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="13" fill="#38bdf8" text-anchor="middle">HTTP</text>
+    <rect x="238" y="0" width="80" height="32" rx="6" fill="#818cf8" opacity="0.12"/>
+    <rect x="238" y="0" width="80" height="32" rx="6" fill="none" stroke="#818cf8" stroke-width="1" opacity="0.3"/>
+    <text x="278" y="21" font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="13" fill="#818cf8" text-anchor="middle">Null</text>
+    <rect x="334" y="0" width="96" height="32" rx="6" fill="#f59e0b" opacity="0.12"/>
+    <rect x="334" y="0" width="96" height="32" rx="6" fill="none" stroke="#f59e0b" stroke-width="1" opacity="0.3"/>
+    <text x="382" y="21" font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="13" fill="#f59e0b" text-anchor="middle">JSON</text>
+  </g>
+  <g transform="translate(780, 110)" opacity="0.5">
+    <text font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="13" fill="#64748b">
+      <tspan x="0" dy="0" fill="#34d399">[INFO]</tspan><tspan fill="#94a3b8"> App started on port 3000</tspan>
+      <tspan x="0" dy="24" fill="#f59e0b">[WARN]</tspan><tspan fill="#94a3b8"> Cache miss for key user:1</tspan>
+      <tspan x="0" dy="24" fill="#f87171">[ERROR]</tspan><tspan fill="#94a3b8"> DB connection failed</tspan>
+      <tspan x="0" dy="24" fill="#38bdf8">[DEBUG]</tspan><tspan fill="#94a3b8"> Resolving UserService</tspan>
+    </text>
+  </g>
+  <rect x="0" y="397" width="1200" height="3" fill="url(#accent)"/>
+  <g transform="translate(1080, 360)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#38bdf8" opacity="0.1"/>
+    <text x="40" y="16" font-family="ui-monospace,'Cascadia Code','Fira Code',Menlo,monospace" font-size="12" fill="#38bdf8" text-anchor="middle">v1.1.2</text>
+  </g>
+</svg>
