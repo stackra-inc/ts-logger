@@ -1,0 +1,72 @@
+{
+  "name": "@stackra/ts-logger",
+  "version": "1.0.0",
+  "description": "Multi-channel logging with pluggable reporters — consola-based, DI-integrated, React hooks",
+  "license": "MIT",
+  "author": {
+    "name": "Stackra L.L.C",
+    "email": "dev@stackra.com",
+    "url": "https://stackra.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stackra-inc/ts-logger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stackra-inc/ts-logger/issues"
+  },
+  "homepage": "https://github.com/stackra-inc/ts-logger#readme",
+  "keywords": [
+    "stackra",
+    "typescript",
+    "logger",
+    "logging",
+    "consola",
+    "multi-channel",
+    "react-hooks"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "check-types": "tsc --noEmit",
+    "clean": "rm -rf dist node_modules/.cache",
+    "test": "vitest run --passWithNoTests",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "consola": "^3.4.2"
+  },
+  "peerDependencies": {
+    "@stackra/contracts": "workspace:*",
+    "@stackra/ts-container": "workspace:*",
+    "@stackra/ts-support": "workspace:*",
+    "@vivtel/metadata": "*",
+    "react": ">=18"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@stackra/testing": "workspace:*",
+    "@stackra/typescript-config": "catalog:",
+    "@types/react": "^19.2.14",
+    "react": "^19.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "6.0.3",
+    "vitest": "^4.1.6"
+  }
+}
